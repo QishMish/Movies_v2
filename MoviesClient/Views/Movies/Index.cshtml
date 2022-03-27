@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Movies.Domain.Poco.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="py-5">
+    <div class="container">
+        <div class="row hidden-md-up">
+        @foreach (var movie in Model)
+            {
+                @* <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src=@movie.Poster alt="Card image cap">
+                        <div class="card-body info">
+                            <h5 class="card-title">@movie.Title</h5>
+                            <a class="btn btn-primary" asp-controller="Movies" asp-action="MovieDetail" asp-route-id="@movie.Id">More</a>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img class="card-img-top d-block user-select-none" src=@movie.Poster alt="Card image cap">
+                      <div class="card-body d-flex align-items-center" style="height: 80px;">
+                        <h5 class="card-title bold">@movie.Title</h5>
+                      </div>
+                      <div class="card-body">
+                        <p class="card-text" style="height: 80px; overflow:hidden">@movie.Description</p>
+                      </div>
+                      <div class="card-body">
+                        @*<a href="#" class="card-link">More</a>*@
+                        <a class="btn btn-primary" asp-controller="Movies" asp-action="MovieDetail" asp-route-id="@movie.Id">More</a>
+                      </div>
+                      <div class="card-footer text-muted">
+                        2 days ago
+                      </div>
+                    </div>
+                </div>
+            }
+          </div>
+    </div>
+</div>

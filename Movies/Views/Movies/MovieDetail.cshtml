@@ -1,0 +1,45 @@
+﻿@model Movies.Domain.Poco.Movie
+
+@{
+    ViewData["Title"] = "MovieDetail";
+}
+<div class=" container" >
+    <div>
+        @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+        <a class="btn btn-danger mb-4" asp-action="Index">Back to List</a>
+    </div>
+</div>
+<div class=" container  hidden-md-up d-flex justify-content-center">
+    <div class="card flex-fill">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+      </div>
+       <div class="card-body">
+           <img src=@Model.Poster class="card-img-top" style="width: 250px; object-fit:cover;" alt="poster">
+          <div class="card-body">
+            <p class="card-text">@Model.Description</p>
+          </div>
+          <ul class="list-group list-group-flush">
+                <li class="list-group-item">@Model.Genre</li>
+          </ul>
+      </div>
+      <div class="card-body flex-fill">
+        <a href="#" class="btn btn-info">Book</a>
+        <a href="#" class="btn btn-success">Purchase</a>
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+      </div>
+   @* <div class="card flex-fill">
+        <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>*@
+</div>
+
