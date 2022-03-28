@@ -25,8 +25,18 @@
           </ul>
       </div>
       <div class="card-body flex-fill">
-        <a href="#" class="btn btn-info">Book</a>
-        <a href="#" class="btn btn-success">Purchase</a>
+        <form asp-action="Book" asp-route-id="@Model.Id" >
+            @*<a asp-action="Book" asp-route-id="@Model.Id" class="btn btn-info">Book</a>*@
+           <div class="form-group">
+               <input type="submit" value="Book" class="btn btn-primary" />
+           </div>
+        </form>
+          <form asp-action="Purchase" asp-route-id="@Model.Id" >
+            @*<a asp-action="Purchase" asp-route-id="@Model.Id" class="btn btn-success">Purchase</a>*@
+           <div class="form-group">
+               <input type="submit" value="Purchase" class="btn btn-primary" />
+           </div>
+        </form>
       </div>
       <div class="card-footer text-muted">
         2 days ago

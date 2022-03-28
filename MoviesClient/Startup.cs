@@ -66,7 +66,7 @@ namespace MoviesClient
             app.UseAuthentication();
 
             app.UseAuthorization();
-            app.UseMiddleware<ExceptionHandlerMiddleware>();
+            //app.UseMiddleware<ExceptionHandlerMiddleware>();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -30,7 +30,7 @@ namespace MoviesAdmin.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var movies = Movies.Movies;
-            var movie = movies.FirstOrDefault(m => m.Id == id);
+            var movie = _context.Movie.FirstOrDefault(m => m.Id == id);
             if (movie == null)
                 return NotFound();
 
@@ -59,12 +59,6 @@ namespace MoviesAdmin.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(EditMoviesModel editMoviesModel)
         {
-            //var user = HttpContext.User.Identity.Name;
-            //var userId = _context.Movie.fi
-            //editMoviesModel.UserId = userId;
-            //await _context.Movie.AddAsync(editMoviesModel.Adapt<Movie>());
-            //_context.SaveChanges();
-            //return RedirectToAction("Index");
             var movie = _context.Movie.Where(
              x => x.Id == editMoviesModel.Id).SingleOrDefault();
             if (movie != null)
@@ -80,7 +74,7 @@ namespace MoviesAdmin.Controllers
         {
             return View();
         }
-        [HttpDelete]
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var movie = _context.Movie.Where(
@@ -90,7 +84,7 @@ namespace MoviesAdmin.Controllers
             {
                 _context.Remove(movie);
                 _context.SaveChanges();
-                return Ok();
+                return RedirectToAction("Index");
             }
             return NotFound($"Employee Not Found with ID : {movie.Id}");
         }
