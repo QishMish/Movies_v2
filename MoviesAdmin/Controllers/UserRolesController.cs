@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Movies.Domain.Poco;
+using Movies.PersistanceDB.Context;
 using MoviesAdmin.Models;
 using MoviesAdmin.Models.UserRolesModels;
 
@@ -17,11 +18,13 @@ namespace MoviesAdmin.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole<int>> _roleManager;
+        private readonly ApplicationDbContext _context;
 
-        public UserRolesController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<int>> roleManager)
+        public UserRolesController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<int>> roleManager, ApplicationDbContext context)
         {
             _roleManager = roleManager;
             _userManager = userManager;
+            _context = context;
         }
         public async Task<IActionResult> Index()
         {
@@ -69,6 +72,25 @@ namespace MoviesAdmin.Controllers
             }
             return View(model);
         }
+        [HttpGet]
+        //public async Task<IActionResult> Delete()
+        //{
+        //    return View();
+        //}
+        [HttpPost]
+        public async Task<IActionResult> Delete(int userId)
+        {
+            var movie = _context.ApplicationUser.Where(
+            x => x.Id == userId).SingleOrDefault();
+
+            if (movie != null)
+            {
+                _context.Remove(movie);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return NotFound($"Employee Not Found with ID : {movie.Id}");
+        }
 
         [HttpPost]
         //[Authorize(Roles = "SuperAdmin")]
@@ -104,5 +126,6 @@ namespace MoviesAdmin.Controllers
         {
             return View();
         }
+
     }
 }

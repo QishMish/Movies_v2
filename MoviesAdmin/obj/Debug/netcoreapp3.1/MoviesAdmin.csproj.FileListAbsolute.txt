@@ -1373,3 +1373,4 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.pdb
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.genruntimeconfig.cache
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\Razor\Views\UserRoles\Delete.cshtml.g.cs
