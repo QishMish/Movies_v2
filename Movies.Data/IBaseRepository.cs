@@ -8,7 +8,6 @@ namespace Movies.Data
 {
     public interface IBaseRepository<T> where T : class
     {
-        #region Methods 
 
         Task<List<T>> GetAllAsync();
 
@@ -21,14 +20,5 @@ namespace Movies.Data
         Task RemoveAsync(params object[] Key);
 
         Task UpdateAsync(T entity);
-
-    
-        #endregion
-
-        #region Sets
-
-        IQueryable<T> Table { get; }
-
-        #endregion
     }
 }

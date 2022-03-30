@@ -1134,7 +1134,6 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
@@ -1374,3 +1373,10 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.pdb
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\MoviesAdmin.genruntimeconfig.cache
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\Razor\Views\UserRoles\Delete.cshtml.g.cs
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.Data.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.EF.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.Services.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.EF.pdb
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.Services.pdb
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.Data.pdb

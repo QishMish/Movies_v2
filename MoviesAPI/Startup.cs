@@ -7,6 +7,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Movies.Data;
+using Movies.EF;
+using Movies.EF.Repository;
+using Movies.Services.Abstractions;
+using Movies.Services.Implementations;
+using Movies.Services.Models.JWT;
+using MoviesClient.Infrastracture.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +49,13 @@ namespace MoviesAPI
                     }
                 });
             });
+            services.AddTokenAuthentication(Configuration);
+            services.Configure<JWTConfiguration>(Configuration.GetSection(nameof(JWTConfiguration)));
+
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IJwtService, JwtService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

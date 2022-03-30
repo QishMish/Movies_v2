@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Data
 {
-    internal interface IPersonRepository
+    public interface IAccountRepository
     {
         Task<List<ApplicationUser>> GetAllAsync();
         Task<List<ApplicationUser>> GetAllFullAsync();
