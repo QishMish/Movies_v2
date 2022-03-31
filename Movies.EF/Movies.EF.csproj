@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Movies.Data\Movies.Data.csproj" />
+    <ProjectReference Include="..\Movies.PersistanceDB\Movies.PersistanceDB.csproj" />
+  </ItemGroup>
+
+</Project>

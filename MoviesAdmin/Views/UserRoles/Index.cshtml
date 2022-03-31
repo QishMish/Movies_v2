@@ -22,6 +22,11 @@
                 <td>
                     <a class="btn btn-primary" asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
                 </td>
+                <td>
+                    <form asp-action="Delete">
+                        <a class="btn btn-danger" asp-controller="UserRoles" asp-action="Delete" asp-route-userId="@user.UserId">Delete User</a>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>

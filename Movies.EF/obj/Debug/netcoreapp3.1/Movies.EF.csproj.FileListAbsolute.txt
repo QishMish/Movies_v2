@@ -1,0 +1,17 @@
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.EF.deps.json
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.EF.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.EF.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.Data.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.Domain.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.PersistanceDB.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.Data.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.PersistanceDB.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\bin\Debug\netcoreapp3.1\Movies.Domain.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.csproj.AssemblyReference.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.AssemblyInfoInputs.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.AssemblyInfo.cs
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.csproj.CoreCompileInputs.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.csproj.CopyComplete
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.EF\obj\Debug\netcoreapp3.1\Movies.EF.pdb

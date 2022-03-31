@@ -6,15 +6,18 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Movies.PersistanceDB.Context;
 
 namespace MoviesAdmin.Controllers
 {
     public class RoleManagerController : Controller
     {
         private readonly RoleManager<IdentityRole<int>> _roleManager;
-        public RoleManagerController(RoleManager<IdentityRole<int>> roleManager)
+        private readonly ApplicationDbContext _context;
+        public RoleManagerController(RoleManager<IdentityRole<int>> roleManager, ApplicationDbContext context)
         {
             _roleManager = roleManager;
+            _context = context;
         }
         //[Authorize(Roles = "admin")]
         public async Task<IActionResult> Index()
@@ -31,6 +34,20 @@ namespace MoviesAdmin.Controllers
                 await _roleManager.CreateAsync(new IdentityRole<int>(roleName.Trim()));
             }
             return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public async Task<IActionResult> Delete(int userId)
+        {
+            var movie = _context.Roles.Where(
+            x => x.Id == userId).SingleOrDefault();
+
+            if (movie != null)
+            {
+                _context.Remove(movie);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return NotFound($"Employee Not Found with ID : {movie.Id}");
         }
     }
 }

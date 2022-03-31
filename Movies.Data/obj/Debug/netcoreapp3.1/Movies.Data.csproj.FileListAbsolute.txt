@@ -1,0 +1,13 @@
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\bin\Debug\netcoreapp3.1\Movies.Data.deps.json
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\bin\Debug\netcoreapp3.1\Movies.Data.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\bin\Debug\netcoreapp3.1\Movies.Data.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\bin\Debug\netcoreapp3.1\Movies.Domain.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\bin\Debug\netcoreapp3.1\Movies.Domain.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.csproj.AssemblyReference.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.AssemblyInfoInputs.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.AssemblyInfo.cs
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.csproj.CoreCompileInputs.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.csproj.CopyComplete
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.Data\obj\Debug\netcoreapp3.1\Movies.Data.pdb

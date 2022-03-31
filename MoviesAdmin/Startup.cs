@@ -16,6 +16,10 @@ using MoviesAdmin.Models.UserRolesModels;
 using MoviesAdmin.Models;
 using Movies.Domain.Poco;
 using Movies.PersistanceDB.Seed;
+using Movies.Data;
+using Movies.Services.Implementations;
+using Movies.Services.Abstractions;
+using MoviesAdmin.Infrastructure.Extensions;
 
 namespace MoviesAdmin
 {
@@ -46,6 +50,8 @@ namespace MoviesAdmin
             services.AddRazorPages();
             services.AddScoped<UserRolesViewModel>();
             services.AddScoped<ManageUserRolesViewModel>();
+            services.AddServices();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

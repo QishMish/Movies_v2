@@ -20,6 +20,7 @@
 
             <th>Id</th>
             <th>Role</th>
+            <th>Manage</th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +29,13 @@
             <tr>
                 <td>@role.Id</td>
                 <td>@role.Name</td>
-            </tr>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new {  id=role.Id  })
+                    <form asp-action="Delete">
+                        <input type="submit" value="Delete" class="btn btn-danger" /> |
+                    </form>
+                </td>
+           </tr>
         }
 
     </tbody>
