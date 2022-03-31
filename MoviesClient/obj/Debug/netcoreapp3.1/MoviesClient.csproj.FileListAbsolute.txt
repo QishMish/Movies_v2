@@ -1536,7 +1536,6 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
@@ -1758,3 +1757,9 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesClient\obj\Debug\netcoreapp3.1\MoviesClien
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\obj\Debug\netcoreapp3.1\MoviesClient.Views.pdb
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\obj\Debug\netcoreapp3.1\MoviesClient.csproj.CopyComplete
 C:\Users\Qish\Desktop\Movies_v2\MoviesClient\obj\Debug\netcoreapp3.1\MoviesClient.genruntimeconfig.cache
+C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\Movies.Data.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\Movies.Data.pdb
+C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\Movies.EF.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesClient\bin\Debug\netcoreapp3.1\Movies.EF.pdb

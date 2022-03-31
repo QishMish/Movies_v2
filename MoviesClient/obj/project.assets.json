@@ -3109,6 +3109,20 @@
           "bin/placeholder/Movies.Domain.dll": {}
         }
       },
+      "Movies.EF/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Movies.Data": "1.0.0",
+          "Movies.PersistanceDB": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Movies.EF.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Movies.EF.dll": {}
+        }
+      },
       "Movies.PersistanceDB/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -9744,6 +9758,11 @@
       "path": "../Movies.Domain/Movies.Domain.csproj",
       "msbuildProject": "../Movies.Domain/Movies.Domain.csproj"
     },
+    "Movies.EF/1.0.0": {
+      "type": "project",
+      "path": "../Movies.EF/Movies.EF.csproj",
+      "msbuildProject": "../Movies.EF/Movies.EF.csproj"
+    },
     "Movies.PersistanceDB/1.0.0": {
       "type": "project",
       "path": "../Movies.PersistanceDB/Movies.PersistanceDB.csproj",
@@ -9766,6 +9785,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.15",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "Movies.Domain >= 1.0.0",
+      "Movies.EF >= 1.0.0",
       "Movies.PersistanceDB >= 1.0.0",
       "Movies.Services >= 1.0.0"
     ]
@@ -9799,6 +9819,9 @@
           "projectReferences": {
             "C:\\Users\\Qish\\Desktop\\Movies_v2\\Movies.Domain\\Movies.Domain.csproj": {
               "projectPath": "C:\\Users\\Qish\\Desktop\\Movies_v2\\Movies.Domain\\Movies.Domain.csproj"
+            },
+            "C:\\Users\\Qish\\Desktop\\Movies_v2\\Movies.EF\\Movies.EF.csproj": {
+              "projectPath": "C:\\Users\\Qish\\Desktop\\Movies_v2\\Movies.EF\\Movies.EF.csproj"
             },
             "C:\\Users\\Qish\\Desktop\\Movies_v2\\Movies.PersistanceDB\\Movies.PersistanceDB.csproj": {
               "projectPath": "C:\\Users\\Qish\\Desktop\\Movies_v2\\Movies.PersistanceDB\\Movies.PersistanceDB.csproj"

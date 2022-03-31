@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Movies.Domain\Movies.Domain.csproj" />
+    <ProjectReference Include="..\Movies.EF\Movies.EF.csproj" />
     <ProjectReference Include="..\Movies.PersistanceDB\Movies.PersistanceDB.csproj" />
     <ProjectReference Include="..\Movies.Services\Movies.Services.csproj" />
   </ItemGroup>

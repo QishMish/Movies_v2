@@ -55,9 +55,9 @@ namespace Movies.EF.Repository
 
         }
 
-        public Task RemoveAsync(Movie entity)
+        public async Task RemoveAsync(Movie entity)
         {
-            throw new NotImplementedException();
+            await _repository.RemoveAsync(entity);
         }
 
         public Task RemoveAsync(params object[] Key)
@@ -65,9 +65,9 @@ namespace Movies.EF.Repository
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(Movie entity)
+        public async Task UpdateAsync(Movie entity)
         {
-            throw new NotImplementedException();
+            await _repository.UpdateAsync(entity);
         }
     }
 }

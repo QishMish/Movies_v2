@@ -35,7 +35,7 @@ namespace Movies.Services.Implementations
 
         public async Task RemoveAsync(Movie entity)
         {
-            await _repo.GetAsync(entity);
+            await _repo.RemoveAsync(entity);
         }
 
         public async Task RemoveAsync(params object[] Key)

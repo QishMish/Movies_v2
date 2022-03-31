@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Movies.Domain.Poco;
 using Movies.PersistanceDB.Context;
+using MoviesAdmin.Infrastructure.Extensions;
 
 namespace MoviesClient
 {
@@ -29,6 +30,7 @@ namespace MoviesClient
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
             services.ConfigureApplicationCookie(options => options.LoginPath = "/Account/LogIn");
+            services.AddServices();
 
         }
 

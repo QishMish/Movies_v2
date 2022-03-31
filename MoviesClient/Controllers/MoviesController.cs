@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Movies.Domain.Poco;
 using Movies.PersistanceDB.Context;
+using Movies.Services.Abstractions;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,20 +15,30 @@ namespace Movies.Controllers
         public MoviesDb Movies { get; set; } = new MoviesDb();
         private ApplicationDbContext _context;
         UserManager<ApplicationUser> _userManager;
-        public MoviesController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        IMoviesService _movieService;
+        public MoviesController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IMoviesService movieService)
         {
             _context = context;
             _userManager = userManager;
+            _movieService = movieService;   
         }
         public async Task<IActionResult> Index()
         {
-            var movies = _context.Movie.ToList();
+        //    var movies = _context.Movie.ToList();
+        //    return View(movies);
+            var movies = await _movieService.GetAllAsync();
             return View(movies);
+
         }
         [Authorize]
         public async Task<IActionResult> MovieDetail(int id)
         {
-            var movie = _context.Movie.FirstOrDefault(m => m.Id == id);
+            //var movie = _context.Movie.FirstOrDefault(m => m.Id == id);
+            //if (movie == null)
+            //    return NotFound();
+
+            //return View(movie);
+            var movie = await _movieService.GetAsync(id);
             if (movie == null)
                 return NotFound();
 
