@@ -14,14 +14,6 @@ namespace Movies.PersistanceDB.Conifg
         {
             builder.HasKey(x => new { x.User_id, x.Movie_id });
 
-            //builder.HasOne<Person>(pp => pp.Person)
-            //        .WithMany(p => p.PersonPhones).OnDelete(DeleteBehavior.Cascade)
-            //        .HasForeignKey(p => p.PersonId);
-
-            //builder.HasOne<Phone>(pp => pp.Phone)
-            //      .WithMany(p => p.PersonPhones).OnDelete(DeleteBehavior.Cascade)
-            //      .HasForeignKey(p => p.PhoneId);
-
 
             builder.HasOne<ApplicationUser>(pp => pp.ApplicationUser)
                     .WithMany(p => p.Booking)

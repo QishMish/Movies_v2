@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fzRSvrr5m76hcr0MbaEiUok0QlKyYU3gdj7YFR91HG4iVY/p03Sj6J5vRfkCAtcCYOP8Cw4MkfJ9ZLCHc6A3cQ==",
+  "dgSpecHash": "tz+vnhcEgZ+axYkXFUDKB+9+6Cit1uGrehu4DhHYdB19UtAM08llZE1caL0R/RxH2WQRAjHLp0zgHrzMo8ErRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Qish\\Desktop\\Movies_v2\\MoviesAPI\\MoviesAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Qish\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
+    "C:\\Users\\Qish\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\Qish\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Qish\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Qish\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",

@@ -19,5 +19,11 @@ namespace Movies.Services.Abstractions
         Task RemoveAsync(params object[] Key);
 
         Task UpdateAsync(Movie entity);
+        Task Book(Booking entity);
+        Task Purchase(Purchase entity);
+        Task DeleteBooking(Booking entity);
+        Task DeletePurchase(Purchase entity);
+
+
     }
 }

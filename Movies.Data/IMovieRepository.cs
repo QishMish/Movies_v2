@@ -20,5 +20,9 @@ namespace Movies.Data
         public Task RemoveAsync(params object[] Key);
 
         public Task UpdateAsync(Movie entity);
+        public Task Book(Booking entity);
+        public Task Purchase(Purchase entity);
+        public Task DeleteBooking(Booking entity);
+        public Task DeletePurchase(Purchase entity);
     }
 }

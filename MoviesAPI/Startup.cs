@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,9 +11,13 @@ using Microsoft.OpenApi.Models;
 using Movies.Data;
 using Movies.EF;
 using Movies.EF.Repository;
+using Movies.PersistanceDB.Context;
 using Movies.Services.Abstractions;
 using Movies.Services.Implementations;
 using Movies.Services.Models.JWT;
+using MoviesAdmin.Infrastracture.Mappings;
+using MoviesAPI.Infrastructure.Extensions;
+using MoviesAPI.Infrastructure.Extensions;
 using MoviesClient.Infrastracture.Extensions;
 using System;
 using System.Collections.Generic;
@@ -49,12 +54,16 @@ namespace MoviesAPI
                     }
                 });
             });
+
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTokenAuthentication(Configuration);
             services.Configure<JWTConfiguration>(Configuration.GetSection(nameof(JWTConfiguration)));
+            services.AddServices();
+            services.RegisterMaps();
+            //services.AddScoped<IMovieRepository, MovieRepository>();
+            //services.AddScoped<IAccountRepository, AccountRepository>();
+            //services.AddScoped<IJwtService, JwtService>();
 
-            services.AddScoped<IMovieRepository, MovieRepository>();
-            services.AddScoped<IAccountRepository, AccountRepository>();
-            services.AddScoped<IJwtService, JwtService>();
 
         }
 

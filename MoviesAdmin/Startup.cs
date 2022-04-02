@@ -20,6 +20,7 @@ using Movies.Data;
 using Movies.Services.Implementations;
 using Movies.Services.Abstractions;
 using MoviesAdmin.Infrastructure.Extensions;
+using MoviesAdmin.Infrastracture.Mappings;
 
 namespace MoviesAdmin
 {
@@ -51,6 +52,8 @@ namespace MoviesAdmin
             services.AddScoped<UserRolesViewModel>();
             services.AddScoped<ManageUserRolesViewModel>();
             services.AddServices();
+            services.RegisterMaps();
+
 
         }
 
