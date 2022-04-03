@@ -10,6 +10,8 @@ using Movies.PersistanceDB.Context;
 
 namespace MoviesAdmin.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class RoleManagerController : Controller
     {
         private readonly RoleManager<IdentityRole<int>> _roleManager;

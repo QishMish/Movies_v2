@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Movies.Domain.Poco;
 using MoviesClient.Models.AuthModels;
+using System;
 using System.Threading.Tasks;
 
 namespace MoviesClient.Controllers
@@ -35,11 +36,13 @@ namespace MoviesClient.Controllers
                 var user = new ApplicationUser
                 {
                     UserName = model.UserName,
-                    Email = model.Email
+                    Email = model.Email,
+                    SecurityStamp = Guid.NewGuid().ToString()
                 };
 
                 var result = await userManager.CreateAsync(user, model.Password);
-            
+
+
                 if (result.Succeeded)
                 {
                     await signInManager.SignInAsync(user, isPersistent: false);

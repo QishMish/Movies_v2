@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace MoviesAdmin.Controllers
 {
+    [Authorize(Roles = "Admin,Moderator")]
     public class MoviesController : Controller
     {
         private ApplicationDbContext _context;
@@ -113,6 +114,7 @@ namespace MoviesAdmin.Controllers
             return NotFound($"Employee Not Found with ID : {movieEntity.Id}");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Publish(int id)
         {
             var movieEntity = await _movieService.GetAsync(id);

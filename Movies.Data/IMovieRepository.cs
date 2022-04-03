@@ -18,6 +18,8 @@ namespace Movies.Data
         Task Purchase(Purchase entity);
         Task DeleteBooking(Booking entity);
         Task DeletePurchase(Purchase entity);
+        Task<bool> IsBooked(params object[] Key);
+        Task<bool> IsPurchased(params object[] Key);
         Task<List<Movie>> GetAllFullAsync();
     }
 }

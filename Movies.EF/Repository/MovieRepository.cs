@@ -73,6 +73,23 @@ namespace Movies.EF.Repository
             return await _repository.Table.Include(x => x.User).ThenInclude(x => x.Booking).ToListAsync();
 
         }
+
+        public async Task<bool> IsBooked(params object[] Key)
+        {
+            var booked = await _repositoryBooking.GetAsync(Key);
+            if(booked == null)
+                return false;
+            return true;
+        }
+
+        public async Task<bool> IsPurchased(params object[] Key)
+        {
+            var purchased = await _repositoryPurchase.GetAsync(Key);
+            if (purchased == null)
+                return false;
+            return true;
+        }
+
         //public async Task deleteAsync(int id)
         //{
         //    await _repository.RemoveAsync(id);

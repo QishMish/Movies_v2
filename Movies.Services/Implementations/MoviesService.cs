@@ -65,5 +65,16 @@ namespace Movies.Services.Implementations
         {
             return await _repo.GetAllFullAsync();
         }
+
+        public Task<bool> IsBooked(Booking entity)
+        {
+            return _repo.IsBooked(entity.User_id, entity.Movie_id);
+        }
+
+        public Task<bool> IsPurchased(Purchase entity)
+        {
+            return _repo.IsPurchased(entity.User_id, entity.Movie_id);
+
+        }
     }
 }

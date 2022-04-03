@@ -15,6 +15,7 @@ using MoviesAdmin.Models.UserRolesModels;
 
 namespace MoviesAdmin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserRolesController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
