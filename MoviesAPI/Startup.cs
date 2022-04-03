@@ -60,6 +60,9 @@ namespace MoviesAPI
             services.Configure<JWTConfiguration>(Configuration.GetSection(nameof(JWTConfiguration)));
             services.AddServices();
             services.RegisterMaps();
+            services.AddControllers().AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             //services.AddScoped<IMovieRepository, MovieRepository>();
             //services.AddScoped<IAccountRepository, AccountRepository>();
             //services.AddScoped<IJwtService, JwtService>();

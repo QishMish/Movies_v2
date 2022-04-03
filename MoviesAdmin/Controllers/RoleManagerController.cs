@@ -35,11 +35,16 @@ namespace MoviesAdmin.Controllers
             }
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> Delete()
+        {
+            return View();
+        }
         [HttpPost]
-        public async Task<IActionResult> Delete(int userId)
+        public async Task<IActionResult> Delete(int Id)
         {
             var movie = _context.Roles.Where(
-            x => x.Id == userId).SingleOrDefault();
+            x => x.Id == Id).SingleOrDefault();
 
             if (movie != null)
             {
@@ -47,7 +52,7 @@ namespace MoviesAdmin.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return NotFound($"Employee Not Found with ID : {movie.Id}");
+            return NotFound($"Role Not Found with ID : {Id}");
         }
     }
 }

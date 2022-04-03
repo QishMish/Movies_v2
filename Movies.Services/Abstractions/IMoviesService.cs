@@ -23,7 +23,7 @@ namespace Movies.Services.Abstractions
         Task Purchase(Purchase entity);
         Task DeleteBooking(Booking entity);
         Task DeletePurchase(Purchase entity);
-
+        Task<List<Movie>> GetAllFullAsync();
 
     }
 }

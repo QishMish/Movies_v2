@@ -26,11 +26,11 @@ namespace MoviesAdmin.Controllers
         public MoviesDb Movies { get; set; } = new MoviesDb();
         public async Task<IActionResult> Index()
         {
-            ////var movies = Movies.Movies;
-            //var movies =  _context.Movie.ToList();
-            //return View(movies);
-            var movies = await _movieService.GetAllAsync();
+            //var movies = Movies.Movies;
+            var movies =  _context.Movie.ToList();
             return View(movies);
+            //var movies = await _movieService.GetAllAsync();
+            //return View(movies);
         }
         public async Task<IActionResult> Details(int id)
         {
@@ -83,7 +83,8 @@ namespace MoviesAdmin.Controllers
             //}
             //return View(editMoviesModel);
             await _movieService.UpdateAsync(editMoviesModel.Adapt<Movie>());
-            return View(editMoviesModel);
+            return RedirectToAction("Index");
+
         }
         [HttpGet]
         public async Task<IActionResult> Delete()
@@ -110,6 +111,18 @@ namespace MoviesAdmin.Controllers
                 return RedirectToAction("Index");
             }
             return NotFound($"Employee Not Found with ID : {movieEntity.Id}");
+        }
+        [HttpGet]
+        public async Task<IActionResult> Publish(int id)
+        {
+            var movieEntity = await _movieService.GetAsync(id);
+            return View(movieEntity.Adapt<EditMoviesModel>());
+        }
+        [HttpPost]
+        public async Task<IActionResult> Publish(EditMoviesModel editMoviesModel)
+        {
+            await _movieService.UpdateAsync(editMoviesModel.Adapt<Movie>());
+            return RedirectToAction("Index");
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Movies.PersistanceDB.Seed
     public static class MoviesSeed
     {
 
-        public static void Initialize(IServiceProvider serviceProvider)
+        public static void  Initialize(IServiceProvider serviceProvider)
         {
 
             using var scope = serviceProvider.CreateScope();
@@ -35,7 +35,7 @@ namespace Movies.PersistanceDB.Seed
             SeedUsers(context, ref seeded);
 
             if (seeded)
-                  context.SaveChanges();
+                   context.SaveChanges();
         }
 
         private static void Migrate(ApplicationDbContext context)
@@ -56,6 +56,7 @@ namespace Movies.PersistanceDB.Seed
                     Poster = "https://m.media-amazon.com/images/M/MV5BMzk2OTg4MTk1NF5BMl5BanBnXkFtZTcwNjExNTgzNA@@._V1_UX140_CR0,0,140,209_AL_.jpg",
                     Duration = "2h 10m",
                     StartDate = DateTime.Now,
+                    Published = true,
                     User =  new ApplicationUser()
                     {
                         Id =1,
@@ -71,6 +72,7 @@ namespace Movies.PersistanceDB.Seed
                     Description = "James Bond sets out to stop a media mogul's plan to induce war between China and the UK in order to obtain exclusive global media coverage",
                     Poster= "https://m.media-amazon.com/images/M/MV5BMTM1MTk2ODQxNV5BMl5BanBnXkFtZTcwOTY5MDg0NA@@._V1_UX140_CR0,0,140,209_AL_.jpg",
                     Duration = "1h 59m",
+                    Published = true,
                     StartDate = DateTime.Now,
                     User=  new ApplicationUser()
                     {
@@ -88,6 +90,7 @@ namespace Movies.PersistanceDB.Seed
                     Description = "Abraham Lincoln, the 16th President of the United States, discovers vampires are planning to take over the United States. He makes it his mission to eliminate them.",
                     Poster = "https://m.media-amazon.com/images/M/MV5BNjY2Mzc0MDA4NV5BMl5BanBnXkFtZTcwOTg5OTcxNw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
                     Duration = "1h 5m",
+                    Published = true,
                     StartDate = DateTime.Now,
                     User=  new ApplicationUser()
                     {
@@ -105,6 +108,7 @@ namespace Movies.PersistanceDB.Seed
                     Description = "After running away fails, a terrified woman empowers herself in order to battle her abusive husband.",
                     Poster ="https://m.media-amazon.com/images/M/MV5BZTViYzM3MWYtM2IzMC00NjMwLWE2ZDQtMTQ1YmE5NGE0MTU5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY209_CR0,0,140,209_AL_.jpg",
                     Duration = "1h 55m",
+                    Published = true,
                     StartDate = DateTime.Now,
                     User=  new ApplicationUser()
                     {
@@ -123,6 +127,7 @@ namespace Movies.PersistanceDB.Seed
                     Description = "Los Angeles police officer Brian O'Conner must decide where his loyalty really lies when he becomes enamored with the street racing world he has been sent undercover to destroy.",
                     Poster = "https://m.media-amazon.com/images/M/MV5BNzlkNzVjMDMtOTdhZC00MGE1LTkxODctMzFmMjkwZmMxZjFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY209_CR0,0,140,209_AL_.jpg",
                     Duration = "1h 46m",
+                    Published = true,
                     StartDate = DateTime.Now,
                     User=  new ApplicationUser()
                     {

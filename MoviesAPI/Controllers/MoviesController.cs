@@ -23,6 +23,8 @@ namespace MoviesAPI.Controllers
         {
             var movies = await _movieService.GetAllAsync();
             return Ok(movies);
+            //var movies = await _movieService.GetAllFullAsync();
+            //return Ok(movies);
         }
         [HttpGet]
         [Route("{movieId}")]

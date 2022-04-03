@@ -8,11 +8,10 @@ namespace Movies.Data
 {
     public interface IAccountRepository
     {
-        Task<List<ApplicationUser>> GetAllAsync();
-        Task<List<ApplicationUser>> GetAllFullAsync();
+        Task<ApplicationUser> GetAsync(string username, string  password);
         Task<ApplicationUser> GetAsync(int id);
         Task<int> CreateAsync(ApplicationUser user);
-        Task DeleteAsync(int id);
-        Task<bool> Exists(int id);
+        Task<List<ApplicationUser>> GetFullUserAsync();
+        Task<ApplicationUser> GetFullCertainUserAsync(int userId);
     }
 }

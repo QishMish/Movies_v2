@@ -13,5 +13,7 @@ namespace MoviesAdmin.Models.Movies
         public string Duration { get; set; }
         public DateTime StartDate { get; set; }
         public int UserId { get; set; }
+        public bool Published { get; set; }
+
     }
 }

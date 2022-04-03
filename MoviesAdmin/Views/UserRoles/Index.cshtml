@@ -20,7 +20,14 @@
                 <td>@user.Email</td>
                 <td>@string.Join(" , ", user.Roles.ToList())</td>
                 <td>
-                    <a class="btn btn-primary" asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
+                    @if(user.Roles.Any(u=>u=="Admin"|| u=="Moderator")){
+                        <a  asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
+                        
+                    }else{
+                        <a  asp-controller="UserRoles" asp-action="UserBookings" asp-route-userId="@user.UserId">View User's Booking</a>
+                        <span>|</span>
+                        <a  asp-controller="UserRoles" asp-action="Manage" asp-route-userId="@user.UserId">Manage Roles</a>
+                    }
                 </td>
                 <td>
                     <form asp-action="Delete">

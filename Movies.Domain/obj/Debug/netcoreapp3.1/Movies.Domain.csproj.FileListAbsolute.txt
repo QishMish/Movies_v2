@@ -28,3 +28,13 @@ C:\Users\Qish\Desktop\Movies.Net-main\Movies.Domain\obj\Debug\netcoreapp3.1\Movi
 C:\Users\Qish\Desktop\Movies.Net-main\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Qish\Desktop\Movies.Net-main\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.dll
 C:\Users\Qish\Desktop\Movies.Net-main\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\bin\Debug\netcoreapp3.1\Movies.Domain.deps.json
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\bin\Debug\netcoreapp3.1\Movies.Domain.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\bin\Debug\netcoreapp3.1\Movies.Domain.pdb
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.csproj.AssemblyReference.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.AssemblyInfoInputs.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.AssemblyInfo.cs
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.dll
+C:\Users\Qish\Desktop\Movies_v2\Movies.Domain\obj\Debug\netcoreapp3.1\Movies.Domain.pdb

@@ -4,18 +4,21 @@ using Movies.Domain.Poco;
 using MoviesAdmin.Models.AuthModels;
 using System.Threading.Tasks;
 
+
 namespace MoviesClient.Controllers
 {
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly RoleManager<IdentityRole<int>> _roleManager;
 
-        public AccountController(UserManager<ApplicationUser> userManager,
+        public AccountController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<int>> roleManager,
             SignInManager<ApplicationUser> signInManager)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
+            _roleManager = roleManager;
         }
         [HttpGet]
         public IActionResult Register()
@@ -37,6 +40,7 @@ namespace MoviesClient.Controllers
                     UserName = model.UserName,
                     Email = model.Email
                 };
+                await userManager.AddToRoleAsync(user, "User");
 
                 var result = await userManager.CreateAsync(user, model.Password);
             

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Movies.Domain.Poco;
 using Movies.PersistanceDB.Context;
+using Movies.Services.Abstractions;
 using MoviesAdmin.Models;
 using MoviesAdmin.Models.UserRolesModels;
 
@@ -19,12 +20,16 @@ namespace MoviesAdmin.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole<int>> _roleManager;
         private readonly ApplicationDbContext _context;
+        private readonly IAccountService _accountService;
+        private readonly IMoviesService _moviesService;
 
-        public UserRolesController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<int>> roleManager, ApplicationDbContext context)
+        public UserRolesController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole<int>> roleManager, ApplicationDbContext context, IAccountService accountService, IMoviesService moviesService)
         {
             _roleManager = roleManager;
             _userManager = userManager;
             _context = context;
+            _accountService = accountService;
+            _moviesService = moviesService;
         }
         public async Task<IActionResult> Index()
         {
@@ -122,10 +127,35 @@ namespace MoviesAdmin.Controllers
             return new List<string>(await _userManager.GetRolesAsync(user));
         }
         [AllowAnonymous]
+
         public async Task<IActionResult> AccessDenied()
         {
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> UserBookings(int UserId)
+        {
+            var userWithBookings = await _accountService.GetFullCertainUserAsync(UserId);
+            var user = await  _accountService.GetAsync(UserId);
+            var movies = userWithBookings.Booking;
+            List<Tuple<int, string>> movieDetails = new List<Tuple<int, string>>();
 
+            foreach (var item in movies)
+            {
+                var mov = await _moviesService.GetAsync(item.Movie_id);
+                movieDetails.Add(new Tuple<int, string>(mov.Id, mov.Title));
+            }
+            ViewData["user"] = userWithBookings.UserName;
+            ViewData["movies"] = movieDetails;
+            //var movieTitles
+            return View(userWithBookings);
+        }
+        [HttpPost]
+        public async Task<IActionResult> CancelBooking(int UserId, int MovieId)
+        {
+            var booking = new Booking() { User_id = UserId, Movie_id = MovieId };   
+            await _moviesService.DeleteBooking(booking);
+            return RedirectToAction("Index");
+        }
     }
 }

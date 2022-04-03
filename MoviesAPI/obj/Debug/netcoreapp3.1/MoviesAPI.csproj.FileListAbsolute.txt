@@ -132,3 +132,6 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.cspr
 C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.genruntimeconfig.cache
 C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\bin\Debug\netcoreapp3.1\Mapster.dll
 C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\bin\Debug\netcoreapp3.1\Mapster.Core.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Qish\Desktop\Movies_v2\MoviesAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

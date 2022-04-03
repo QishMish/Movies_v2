@@ -8,21 +8,16 @@ namespace Movies.Data
 {
     public interface IMovieRepository
     {
-        //Task Book(int userId, int movieId);
-        //Task Purchase(int userId, int movieId);
-        public Task AddAsync(Movie entity);
-        public Task<List<Movie>> GetAllAsync();
-
-        public Task<Movie> GetAsync(params object[] key);
-
-        public Task RemoveAsync(Movie entity);
-
-        public Task RemoveAsync(params object[] Key);
-
-        public Task UpdateAsync(Movie entity);
-        public Task Book(Booking entity);
-        public Task Purchase(Purchase entity);
-        public Task DeleteBooking(Booking entity);
-        public Task DeletePurchase(Purchase entity);
+        Task AddAsync(Movie entity);
+        Task<List<Movie>> GetAllAsync();
+        Task<Movie> GetAsync(params object[] key);
+        Task RemoveAsync(Movie entity);
+        Task RemoveAsync(params object[] Key);
+        Task UpdateAsync(Movie entity);
+        Task Book(Booking entity);
+        Task Purchase(Purchase entity);
+        Task DeleteBooking(Booking entity);
+        Task DeletePurchase(Purchase entity);
+        Task<List<Movie>> GetAllFullAsync();
     }
 }
