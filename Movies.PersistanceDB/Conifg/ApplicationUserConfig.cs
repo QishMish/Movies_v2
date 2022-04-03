@@ -12,7 +12,7 @@ namespace Movies.PersistanceDB.Conifg
     {
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
-            builder.HasMany(x => x.Movies).WithOne(x => x.User);
+            //builder.HasMany(x => x.Movies).WithOne(x => x.User);
             //builder.HasMany(x => x.Purchase).WithMany();
         }
     }

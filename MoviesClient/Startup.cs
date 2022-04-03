@@ -32,6 +32,7 @@ namespace MoviesClient
             services.ConfigureApplicationCookie(options => options.LoginPath = "/Account/LogIn");
             services.AddServices();
 
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

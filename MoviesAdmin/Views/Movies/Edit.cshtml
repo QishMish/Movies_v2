@@ -52,6 +52,20 @@
                 <input hidden asp-for="UserId" class="form-control" />
                 <span hidden asp-validation-for="UserId" class="text-danger"></span>
             </div>
+           @* <div class="form-group">
+              <label asp-for="Published" for="inputState">Select Status</label>
+              <select asp-for="Published" id="inputState" class="form-control" >
+                <option asp-for="Published" selected>Choose status</option>
+                <option asp-for="Published">true</option>
+                <option asp-for="Published">false</option>
+                <span asp-validation-for="Duration" class="text-danger"></span>
+             </select>
+             </div>*@
+              <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Published" /> @Html.DisplayNameFor(model => model.Published)
+                </label>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

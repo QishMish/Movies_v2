@@ -8,8 +8,9 @@ namespace Movies.Domain.Poco
 
     public class ApplicationUser : IdentityUser<int> 
     {
-        public ICollection<Movie> Movies { get; set; }
-        public  ICollection<Booking> Booking { get; set; }
+
+        //public ICollection<Movie> Movies { get; set; }
+        public ICollection<Booking> Booking { get; set; }
         public  ICollection<Purchase> Purchase { get; set; }
     }
 }

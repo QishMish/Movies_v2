@@ -13,6 +13,7 @@ namespace Movies.Domain.Poco
         public string Poster { get; set; }  
         public string Duration { get; set; }
         public int UserId { get; set; }
+        public bool Published { get; set; }
         public DateTime StartDate { get; set; }
         public ApplicationUser User { get; set; }
         public ICollection<Booking> Booking { get; set; }

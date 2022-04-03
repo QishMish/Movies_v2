@@ -20,5 +20,7 @@ namespace Movies.Data
         Task RemoveAsync(params object[] Key);
 
         Task UpdateAsync(T entity);
+
+         IQueryable<T> Table { get; }
     }
 }

@@ -19,6 +19,8 @@ namespace Movies.Worker
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
+                    services.AddHostedService<MovieWorker>();
+                    services.AddSingleton<ApiClient>();
                 });
     }
 }

@@ -21,32 +21,49 @@ namespace Movies.Services.Implementations
         {
             await _repo.AddAsync(entity);
         }
-
         public async Task<List<Movie>> GetAllAsync()
         {
            return await _repo.GetAllAsync();
 
         }
-
         public async Task<Movie> GetAsync(params object[] key)
         {
             return await _repo.GetAsync(key);
         }
-
+        public async Task Purchase(Purchase entity)
+        {
+            await _repo.Purchase(entity);
+        }
+        public async Task Book(Booking entity)
+        {
+            await _repo.Book(entity);
+        }
         public async Task RemoveAsync(Movie entity)
         {
             await _repo.RemoveAsync(entity);
         }
-
         public async Task RemoveAsync(params object[] Key)
         {
             await _repo.RemoveAsync(Key);
         }
-
         public async Task UpdateAsync(Movie entity)
         {
             await _repo.UpdateAsync(entity);
 
+        }
+        public async Task DeleteBooking(Booking entity)
+        {
+            await _repo.DeleteBooking(entity);
+        }
+        public async Task DeletePurchase(Purchase entity)
+        {
+            await _repo.DeletePurchase(entity);
+
+        }
+
+        public async Task<List<Movie>> GetAllFullAsync()
+        {
+            return await _repo.GetAllFullAsync();
         }
     }
 }

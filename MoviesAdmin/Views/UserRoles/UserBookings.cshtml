@@ -1,0 +1,38 @@
+﻿@model Movies.Domain.Poco.ApplicationUser
+
+@{
+    ViewData["Title"] = "UserBookings";
+}
+
+<h1 class="mb-4">User's' Bookings</h1>
+
+<h3> @ViewData["user"]</h3>
+
+    @{
+        var movies = ViewData["movies"] as List<Tuple<int,string>>;
+    }
+    @if(movies.Count < 1){
+        <h1 class='m-auto'>No Bookings Found</h1>
+    }else{
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Movie Title</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+    @for (var i = 0; i < movies.Count ; i++)
+        {
+        var index = i + 1;
+        <tr>
+            <th scope="row">@index</th>
+            <td>@movies[i].Item2</td>
+            <td>@Html.ActionLink("Cancel Booking", "CancelBooking", new { UserId = Model.Id, MovieId = movies[i].Item1})</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+}
+

@@ -1,9 +1,11 @@
 ﻿using Movies.Data;
 using Movies.Domain.Poco;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Movies.EF.Repository
 {
@@ -12,36 +14,30 @@ namespace Movies.EF.Repository
         private IBaseRepository<ApplicationUser> _repository;
         public AccountRepository(IBaseRepository<ApplicationUser> repository)
         {
-
+            _repository = repository;
         }
-        public Task<int> CreateAsync(ApplicationUser user)
+        public async Task<int> CreateAsync(ApplicationUser user)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteAsync(int id)
-        {
-            throw new NotImplementedException();
+            await _repository.AddAsync(user);
+            return user.Id;
         }
 
-        public Task<bool> Exists(int id)
+        public async Task<ApplicationUser> GetAsync(string username, string password)
         {
-            throw new NotImplementedException();
+            return await _repository.GetAsync(username, password);
         }
-
-        public Task<List<ApplicationUser>> GetAllAsync()
+        public async Task<ApplicationUser> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _repository.GetAsync(id);
         }
-
-        public Task<List<ApplicationUser>> GetAllFullAsync()
+        public async Task<List<ApplicationUser>> GetFullUserAsync()
         {
-            throw new NotImplementedException();
+            return await _repository.Table.Include(x => x.Booking).ThenInclude(y=>y.Movie).ToListAsync();
         }
-
-        public Task<ApplicationUser> GetAsync(int id)
+        public async Task<ApplicationUser> GetFullCertainUserAsync(int userId)
         {
-            throw new NotImplementedException();
+            var userWithBookings = _repository.Table.Include(x => x.Booking).ToList().FirstOrDefault(x=>x.Id == userId);
+            return /*await _repository.GetAsync(userId);*/ userWithBookings;
         }
     }
 }
