@@ -40,7 +40,6 @@ namespace MoviesClient.Controllers
                     UserName = model.UserName,
                     Email = model.Email
                 };
-                await userManager.AddToRoleAsync(user, "User");
 
                 var result = await userManager.CreateAsync(user, model.Password);
             
@@ -87,6 +86,10 @@ namespace MoviesClient.Controllers
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
+        }
+        public async Task<IActionResult> AccessDenied()
+        {
+            return View();
         }
     }
 }

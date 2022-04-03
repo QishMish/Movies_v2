@@ -1383,3 +1383,4 @@ C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\bin\Debug\netcoreapp3.1\Movies.Data.
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\Razor\Views\RoleManager\Delete.cshtml.g.cs
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Publish.cshtml.g.cs
 C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\Razor\Views\UserRoles\UserBookings.cshtml.g.cs
+C:\Users\Qish\Desktop\Movies_v2\MoviesAdmin\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs

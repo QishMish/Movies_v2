@@ -25,18 +25,43 @@
           </ul>
       </div>
       <div class="card-body flex-fill">
-        <form asp-action="Book" asp-route-id="@Model.Id" >
-            @*<a asp-action="Book" asp-route-id="@Model.Id" class="btn btn-info">Book</a>*@
-           <div class="form-group">
-               <input type="submit" value="Book" class="btn btn-primary" />
-           </div>
-        </form>
-          <form asp-action="Purchase" asp-route-id="@Model.Id" >
-            @*<a asp-action="Purchase" asp-route-id="@Model.Id" class="btn btn-success">Purchase</a>*@
-           <div class="form-group">
-               <input type="submit" value="Purchase" class="btn btn-primary" />
-           </div>
-        </form>
+
+            @if ((bool)@ViewData["booked"])
+            {
+                <form asp-action="DeleteBook" asp-route-id="@Model.Id" >
+                    @*<a asp-action="Book" asp-route-id="@Model.Id" class="btn btn-info">Book</a>*@
+                   <div class="form-group">
+                       <input type="submit" value="Cancel Booking" class="btn btn-primary" />
+                   </div>
+                </form>
+                  <form asp-action="Purchase" asp-route-id="@Model.Id" >
+                    @*<a asp-action="Purchase" asp-route-id="@Model.Id" class="btn btn-success">Purchase</a>*@
+                   <div class="form-group">
+                       <input type="submit" value="Purchase" class="btn btn-primary" />
+                   </div>
+                </form>
+            }else if((bool)@ViewData["purchased"])
+            {
+                  <form asp-action="DeletePurchase" asp-route-id="@Model.Id" >
+                    @*<a asp-action="Purchase" asp-route-id="@Model.Id" class="btn btn-success">Purchase</a>*@
+                   <div class="form-group">
+                       <input type="submit" value="Cancel Purchase" class="btn btn-primary" />
+                   </div>
+                </form>
+            }else{
+                  <form asp-action="Book" asp-route-id="@Model.Id" >
+                    @*<a asp-action="Book" asp-route-id="@Model.Id" class="btn btn-info">Book</a>*@
+                   <div class="form-group">
+                       <input type="submit" value="Book" class="btn btn-primary" />
+                   </div>
+                </form>
+                  <form asp-action="Purchase" asp-route-id="@Model.Id" >
+                    @*<a asp-action="Purchase" asp-route-id="@Model.Id" class="btn btn-success">Purchase</a>*@
+                   <div class="form-group">
+                       <input type="submit" value="Purchase" class="btn btn-primary" />
+                   </div>
+                </form>
+            }
       </div>
       <div class="card-footer text-muted">
         2 days ago

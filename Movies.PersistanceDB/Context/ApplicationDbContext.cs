@@ -22,6 +22,7 @@ namespace Movies.PersistanceDB.Context
         public DbSet<Purchase> Purchase { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+     
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;

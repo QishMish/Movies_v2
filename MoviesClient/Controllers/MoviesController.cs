@@ -36,11 +36,23 @@ namespace Movies.Controllers
             //var movie = _context.Movie.FirstOrDefault(m => m.Id == id);
             //if (movie == null)
             //    return NotFound();
+            var user = HttpContext.User.Identity.Name;
+            var userId = _context.ApplicationUser.ToList().Find(u => u.UserName == user).Id;
+            var book = new Booking() { User_id = userId, Movie_id = id };
+            var purchase = new Purchase() { User_id = userId, Movie_id = id };
+
+            var booked = await _movieService.IsBooked(book);
+            var purchased = await _movieService.IsPurchased(purchase);
+
+
+            ViewData["booked"] = booked;
+            ViewData["purchased"] = purchased;
 
             //return View(movie);
             var movie = await _movieService.GetAsync(id);
             if (movie == null)
                 return NotFound();
+            
 
             return View(movie);
         }
@@ -57,8 +69,9 @@ namespace Movies.Controllers
 
             await _context.Booking.AddAsync(booking);
             _context.SaveChanges();
-            return RedirectToAction("index");
-            
+            return RedirectToAction($"MovieDetail", new { id = id });
+
+
         }
         [HttpPost]
         public async Task<IActionResult> DeleteBook(int id)
@@ -71,9 +84,11 @@ namespace Movies.Controllers
 
             var booking = new Booking() { User_id = userId, Movie_id = movie.Id };
 
-            await _context.Booking.AddAsync(booking);
+             _context.Booking.Remove(booking);
             _context.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction($"MovieDetail", new { id = id });
+
+
 
         }
         [HttpPost]
@@ -89,7 +104,10 @@ namespace Movies.Controllers
 
             await _context.Purchase.AddAsync(purchase);
             _context.SaveChanges();
-            return RedirectToAction("index");
+            return RedirectToAction($"MovieDetail", new { id = id });
+
+
+
 
         }
         [HttpPost]
@@ -101,12 +119,11 @@ namespace Movies.Controllers
             var user = HttpContext.User.Identity.Name;
             var userId = _context.ApplicationUser.ToList().Find(u => u.UserName == user).Id;
 
-            var booking = new Booking() { User_id = userId, Movie_id = movie.Id };
+            var purchase = new Purchase() { User_id = userId, Movie_id = movie.Id };
 
-            await _context.Booking.AddAsync(booking);
+            _context.Purchase.Remove(purchase);
             _context.SaveChanges();
-            return RedirectToAction("index");
-
+            return RedirectToAction($"MovieDetail", new { id = id });
         }
     }
 }
